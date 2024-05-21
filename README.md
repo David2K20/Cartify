@@ -1,5 +1,5 @@
 # Cartify
- Cartify, an simple and intuitive application for managing your shopping list.
+ Cartify, a simple and intuitive application for managing your shopping list.
 # Features
  This App allows you to add, remove, and check items in your cart.
 # Installation
