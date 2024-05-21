@@ -12,6 +12,7 @@ const shoppingListInDB = ref(database, "shoppingList")
 const inputFieldEl = document.getElementById("input-field")
 const addButtonEl = document.getElementById("add-button")
 const shoppingListEl = document.getElementById("shopping-list")
+const removeEl = document.getElementById("remove-el")
 
 addButtonEl.addEventListener("click", function() {
     let inputValue = inputFieldEl.value
@@ -35,13 +36,14 @@ onValue(shoppingListInDB, function(snapshot) {
             let currentItemValue = currentItem[1]
             
             addToInputList(currentItem)
+            removeEl.innerHTML = "Click to remove items from list"
         }    
     } else {
         shoppingListEl.innerHTML = "No items here... yet"
+        removeEl.innerHTML = ""
         
     }   
 })
-
 
 function clearShoppingListEl() {
     shoppingListEl.innerHTML = ""
